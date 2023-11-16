@@ -2,7 +2,6 @@
   "name": "BlogR",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jye10032.github.io/BlogR",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
