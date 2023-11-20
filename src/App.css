@@ -328,10 +328,22 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .banner img {
+  /*
+  在垂直方向上会以 updown 动画进行上下浮动。
+  */
   animation: updown 3s linear infinite;
 }
 
+
 @keyframes updown {
+
+  /*
+  这段 CSS 代码定义了一个名为 updown 的关键帧动画（keyframes）。
+  这个动画将 .banner img 元素在垂直方向上进行上下浮动。 
+  0%： 元素在动画开始时的状态，向上平移 -20px。 
+  50%： 元素在动画的一半时的状态，向下平移 20px。 
+  100%： 元素在动画结束时的状态，再次向上平移 -20px。 
+  */
   0% {
     transform: translateY(-20px);
   }

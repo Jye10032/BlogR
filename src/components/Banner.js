@@ -22,6 +22,7 @@ export const Banner = () => {
         return () => { clearInterval(ticker) };
     }, [text])
 
+    //设置打字机效果
     const tick = () => {
         let i = loopNum % toRotate.length;
         let fullText = toRotate[i];
@@ -50,7 +51,7 @@ export const Banner = () => {
     return (
         <section className="banner" id="home">
             <Container>
-                <Row className="aligh-items-center">
+                <Row className="align-items-center">
                     <Col xs={12} md={6} xl={7}>
                         <TrackVisibility>
                             {({ isVisible }) =>
@@ -62,10 +63,15 @@ export const Banner = () => {
                                 </div>}
                         </TrackVisibility>
                     </Col>
-                    <Col xs={12} md={6} xl={5}>
+                    <Col xs={12} md={6} xl={5}/*指定不同屏幕尺寸下的列宽。1到12的整数 */>
                         <TrackVisibility>
                             {({ isVisible }) =>
-                                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
+                                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}
+                                /*
+                                "animate__animated animate__zoomIn"是Animate.css库提供的类名，
+                                用于添加动画效果。
+                                "animate__animated"启用动画，
+                                "animate__zoomIn"定义了动画类型为缩放（zoom in）。 */>
                                     <img src={headerImg} alt="Header Img" />
                                 </div>}
                         </TrackVisibility>
